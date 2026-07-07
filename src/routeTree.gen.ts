@@ -9,8 +9,56 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as RemoteJobsRouteImport } from './routes/remote-jobs'
+import { Route as ItJobsRouteImport } from './routes/it-jobs'
+import { Route as InternshipsRouteImport } from './routes/internships'
+import { Route as HealthcareJobsRouteImport } from './routes/healthcare-jobs'
+import { Route as GovernmentJobsRouteImport } from './routes/government-jobs'
+import { Route as FreelanceJobsRouteImport } from './routes/freelance-jobs'
+import { Route as EngineeringJobsRouteImport } from './routes/engineering-jobs'
+import { Route as BrowseJobsRouteImport } from './routes/browse-jobs'
 import { Route as IndexRouteImport } from './routes/index'
 
+const RemoteJobsRoute = RemoteJobsRouteImport.update({
+  id: '/remote-jobs',
+  path: '/remote-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItJobsRoute = ItJobsRouteImport.update({
+  id: '/it-jobs',
+  path: '/it-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InternshipsRoute = InternshipsRouteImport.update({
+  id: '/internships',
+  path: '/internships',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HealthcareJobsRoute = HealthcareJobsRouteImport.update({
+  id: '/healthcare-jobs',
+  path: '/healthcare-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GovernmentJobsRoute = GovernmentJobsRouteImport.update({
+  id: '/government-jobs',
+  path: '/government-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FreelanceJobsRoute = FreelanceJobsRouteImport.update({
+  id: '/freelance-jobs',
+  path: '/freelance-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngineeringJobsRoute = EngineeringJobsRouteImport.update({
+  id: '/engineering-jobs',
+  path: '/engineering-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrowseJobsRoute = BrowseJobsRouteImport.update({
+  id: '/browse-jobs',
+  path: '/browse-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +67,144 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/remote-jobs': typeof RemoteJobsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/remote-jobs': typeof RemoteJobsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/remote-jobs': typeof RemoteJobsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/browse-jobs'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/remote-jobs'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/browse-jobs'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/remote-jobs'
+  id:
+    | '__root__'
+    | '/'
+    | '/browse-jobs'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/remote-jobs'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BrowseJobsRoute: typeof BrowseJobsRoute
+  EngineeringJobsRoute: typeof EngineeringJobsRoute
+  FreelanceJobsRoute: typeof FreelanceJobsRoute
+  GovernmentJobsRoute: typeof GovernmentJobsRoute
+  HealthcareJobsRoute: typeof HealthcareJobsRoute
+  InternshipsRoute: typeof InternshipsRoute
+  ItJobsRoute: typeof ItJobsRoute
+  RemoteJobsRoute: typeof RemoteJobsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/remote-jobs': {
+      id: '/remote-jobs'
+      path: '/remote-jobs'
+      fullPath: '/remote-jobs'
+      preLoaderRoute: typeof RemoteJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/it-jobs': {
+      id: '/it-jobs'
+      path: '/it-jobs'
+      fullPath: '/it-jobs'
+      preLoaderRoute: typeof ItJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/internships': {
+      id: '/internships'
+      path: '/internships'
+      fullPath: '/internships'
+      preLoaderRoute: typeof InternshipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/healthcare-jobs': {
+      id: '/healthcare-jobs'
+      path: '/healthcare-jobs'
+      fullPath: '/healthcare-jobs'
+      preLoaderRoute: typeof HealthcareJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/government-jobs': {
+      id: '/government-jobs'
+      path: '/government-jobs'
+      fullPath: '/government-jobs'
+      preLoaderRoute: typeof GovernmentJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/freelance-jobs': {
+      id: '/freelance-jobs'
+      path: '/freelance-jobs'
+      fullPath: '/freelance-jobs'
+      preLoaderRoute: typeof FreelanceJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engineering-jobs': {
+      id: '/engineering-jobs'
+      path: '/engineering-jobs'
+      fullPath: '/engineering-jobs'
+      preLoaderRoute: typeof EngineeringJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/browse-jobs': {
+      id: '/browse-jobs'
+      path: '/browse-jobs'
+      fullPath: '/browse-jobs'
+      preLoaderRoute: typeof BrowseJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +217,14 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BrowseJobsRoute: BrowseJobsRoute,
+  EngineeringJobsRoute: EngineeringJobsRoute,
+  FreelanceJobsRoute: FreelanceJobsRoute,
+  GovernmentJobsRoute: GovernmentJobsRoute,
+  HealthcareJobsRoute: HealthcareJobsRoute,
+  InternshipsRoute: InternshipsRoute,
+  ItJobsRoute: ItJobsRoute,
+  RemoteJobsRoute: RemoteJobsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
