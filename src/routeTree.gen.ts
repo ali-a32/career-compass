@@ -9,8 +9,116 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SalaryGuideRouteImport } from './routes/salary-guide'
+import { Route as RemoteJobsRouteImport } from './routes/remote-jobs'
+import { Route as RegisterRouteImport } from './routes/register'
+import { Route as LoginRouteImport } from './routes/login'
+import { Route as ItJobsRouteImport } from './routes/it-jobs'
+import { Route as InternshipsRouteImport } from './routes/internships'
+import { Route as HealthcareJobsRouteImport } from './routes/healthcare-jobs'
+import { Route as GovernmentJobsRouteImport } from './routes/government-jobs'
+import { Route as FreelanceJobsRouteImport } from './routes/freelance-jobs'
+import { Route as EngineeringJobsRouteImport } from './routes/engineering-jobs'
+import { Route as EmployersRouteImport } from './routes/employers'
+import { Route as DashboardRouteImport } from './routes/dashboard'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CompaniesRouteImport } from './routes/companies'
+import { Route as CareerAdviceRouteImport } from './routes/career-advice'
+import { Route as BrowseJobsRouteImport } from './routes/browse-jobs'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SalaryGuideRoute = SalaryGuideRouteImport.update({
+  id: '/salary-guide',
+  path: '/salary-guide',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RemoteJobsRoute = RemoteJobsRouteImport.update({
+  id: '/remote-jobs',
+  path: '/remote-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RegisterRoute = RegisterRouteImport.update({
+  id: '/register',
+  path: '/register',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LoginRoute = LoginRouteImport.update({
+  id: '/login',
+  path: '/login',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ItJobsRoute = ItJobsRouteImport.update({
+  id: '/it-jobs',
+  path: '/it-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InternshipsRoute = InternshipsRouteImport.update({
+  id: '/internships',
+  path: '/internships',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HealthcareJobsRoute = HealthcareJobsRouteImport.update({
+  id: '/healthcare-jobs',
+  path: '/healthcare-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GovernmentJobsRoute = GovernmentJobsRouteImport.update({
+  id: '/government-jobs',
+  path: '/government-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FreelanceJobsRoute = FreelanceJobsRouteImport.update({
+  id: '/freelance-jobs',
+  path: '/freelance-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EngineeringJobsRoute = EngineeringJobsRouteImport.update({
+  id: '/engineering-jobs',
+  path: '/engineering-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EmployersRoute = EmployersRouteImport.update({
+  id: '/employers',
+  path: '/employers',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const DashboardRoute = DashboardRouteImport.update({
+  id: '/dashboard',
+  path: '/dashboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CompaniesRoute = CompaniesRouteImport.update({
+  id: '/companies',
+  path: '/companies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CareerAdviceRoute = CareerAdviceRouteImport.update({
+  id: '/career-advice',
+  path: '/career-advice',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BrowseJobsRoute = BrowseJobsRouteImport.update({
+  id: '/browse-jobs',
+  path: '/browse-jobs',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +127,284 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/career-advice': typeof CareerAdviceRoute
+  '/companies': typeof CompaniesRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/remote-jobs': typeof RemoteJobsRoute
+  '/salary-guide': typeof SalaryGuideRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/career-advice': typeof CareerAdviceRoute
+  '/companies': typeof CompaniesRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/remote-jobs': typeof RemoteJobsRoute
+  '/salary-guide': typeof SalaryGuideRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/blog': typeof BlogRoute
+  '/browse-jobs': typeof BrowseJobsRoute
+  '/career-advice': typeof CareerAdviceRoute
+  '/companies': typeof CompaniesRoute
+  '/contact': typeof ContactRoute
+  '/dashboard': typeof DashboardRoute
+  '/employers': typeof EmployersRoute
+  '/engineering-jobs': typeof EngineeringJobsRoute
+  '/freelance-jobs': typeof FreelanceJobsRoute
+  '/government-jobs': typeof GovernmentJobsRoute
+  '/healthcare-jobs': typeof HealthcareJobsRoute
+  '/internships': typeof InternshipsRoute
+  '/it-jobs': typeof ItJobsRoute
+  '/login': typeof LoginRoute
+  '/register': typeof RegisterRoute
+  '/remote-jobs': typeof RemoteJobsRoute
+  '/salary-guide': typeof SalaryGuideRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/browse-jobs'
+    | '/career-advice'
+    | '/companies'
+    | '/contact'
+    | '/dashboard'
+    | '/employers'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/login'
+    | '/register'
+    | '/remote-jobs'
+    | '/salary-guide'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/browse-jobs'
+    | '/career-advice'
+    | '/companies'
+    | '/contact'
+    | '/dashboard'
+    | '/employers'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/login'
+    | '/register'
+    | '/remote-jobs'
+    | '/salary-guide'
+  id:
+    | '__root__'
+    | '/'
+    | '/about'
+    | '/blog'
+    | '/browse-jobs'
+    | '/career-advice'
+    | '/companies'
+    | '/contact'
+    | '/dashboard'
+    | '/employers'
+    | '/engineering-jobs'
+    | '/freelance-jobs'
+    | '/government-jobs'
+    | '/healthcare-jobs'
+    | '/internships'
+    | '/it-jobs'
+    | '/login'
+    | '/register'
+    | '/remote-jobs'
+    | '/salary-guide'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  BlogRoute: typeof BlogRoute
+  BrowseJobsRoute: typeof BrowseJobsRoute
+  CareerAdviceRoute: typeof CareerAdviceRoute
+  CompaniesRoute: typeof CompaniesRoute
+  ContactRoute: typeof ContactRoute
+  DashboardRoute: typeof DashboardRoute
+  EmployersRoute: typeof EmployersRoute
+  EngineeringJobsRoute: typeof EngineeringJobsRoute
+  FreelanceJobsRoute: typeof FreelanceJobsRoute
+  GovernmentJobsRoute: typeof GovernmentJobsRoute
+  HealthcareJobsRoute: typeof HealthcareJobsRoute
+  InternshipsRoute: typeof InternshipsRoute
+  ItJobsRoute: typeof ItJobsRoute
+  LoginRoute: typeof LoginRoute
+  RegisterRoute: typeof RegisterRoute
+  RemoteJobsRoute: typeof RemoteJobsRoute
+  SalaryGuideRoute: typeof SalaryGuideRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/salary-guide': {
+      id: '/salary-guide'
+      path: '/salary-guide'
+      fullPath: '/salary-guide'
+      preLoaderRoute: typeof SalaryGuideRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/remote-jobs': {
+      id: '/remote-jobs'
+      path: '/remote-jobs'
+      fullPath: '/remote-jobs'
+      preLoaderRoute: typeof RemoteJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/register': {
+      id: '/register'
+      path: '/register'
+      fullPath: '/register'
+      preLoaderRoute: typeof RegisterRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/login': {
+      id: '/login'
+      path: '/login'
+      fullPath: '/login'
+      preLoaderRoute: typeof LoginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/it-jobs': {
+      id: '/it-jobs'
+      path: '/it-jobs'
+      fullPath: '/it-jobs'
+      preLoaderRoute: typeof ItJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/internships': {
+      id: '/internships'
+      path: '/internships'
+      fullPath: '/internships'
+      preLoaderRoute: typeof InternshipsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/healthcare-jobs': {
+      id: '/healthcare-jobs'
+      path: '/healthcare-jobs'
+      fullPath: '/healthcare-jobs'
+      preLoaderRoute: typeof HealthcareJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/government-jobs': {
+      id: '/government-jobs'
+      path: '/government-jobs'
+      fullPath: '/government-jobs'
+      preLoaderRoute: typeof GovernmentJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/freelance-jobs': {
+      id: '/freelance-jobs'
+      path: '/freelance-jobs'
+      fullPath: '/freelance-jobs'
+      preLoaderRoute: typeof FreelanceJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/engineering-jobs': {
+      id: '/engineering-jobs'
+      path: '/engineering-jobs'
+      fullPath: '/engineering-jobs'
+      preLoaderRoute: typeof EngineeringJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/employers': {
+      id: '/employers'
+      path: '/employers'
+      fullPath: '/employers'
+      preLoaderRoute: typeof EmployersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/dashboard': {
+      id: '/dashboard'
+      path: '/dashboard'
+      fullPath: '/dashboard'
+      preLoaderRoute: typeof DashboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/companies': {
+      id: '/companies'
+      path: '/companies'
+      fullPath: '/companies'
+      preLoaderRoute: typeof CompaniesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/career-advice': {
+      id: '/career-advice'
+      path: '/career-advice'
+      fullPath: '/career-advice'
+      preLoaderRoute: typeof CareerAdviceRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/browse-jobs': {
+      id: '/browse-jobs'
+      path: '/browse-jobs'
+      fullPath: '/browse-jobs'
+      preLoaderRoute: typeof BrowseJobsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +417,24 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  BlogRoute: BlogRoute,
+  BrowseJobsRoute: BrowseJobsRoute,
+  CareerAdviceRoute: CareerAdviceRoute,
+  CompaniesRoute: CompaniesRoute,
+  ContactRoute: ContactRoute,
+  DashboardRoute: DashboardRoute,
+  EmployersRoute: EmployersRoute,
+  EngineeringJobsRoute: EngineeringJobsRoute,
+  FreelanceJobsRoute: FreelanceJobsRoute,
+  GovernmentJobsRoute: GovernmentJobsRoute,
+  HealthcareJobsRoute: HealthcareJobsRoute,
+  InternshipsRoute: InternshipsRoute,
+  ItJobsRoute: ItJobsRoute,
+  LoginRoute: LoginRoute,
+  RegisterRoute: RegisterRoute,
+  RemoteJobsRoute: RemoteJobsRoute,
+  SalaryGuideRoute: SalaryGuideRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
